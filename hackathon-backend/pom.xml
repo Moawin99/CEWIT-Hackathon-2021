@@ -8,11 +8,11 @@
 		<version>2.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>hackathon-backend</groupId>
-	<artifactId>internzip</artifactId>
+	<groupId>hackathon</groupId>
+	<artifactId>hackathon-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>internzip</name>
-	<description>Hackathon project CEWIT 2021</description>
+	<name>internzip-backend</name>
+	<description>Internzip backend</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -26,11 +26,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
