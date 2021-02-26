@@ -1,4 +1,4 @@
-package hackathon.hackathonbackend;
+package cewithackathon.internzipbackend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
