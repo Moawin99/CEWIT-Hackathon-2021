@@ -8,7 +8,10 @@ function Listings() {
     return(
         <div className="App">
             <ListingHeader />
-            <ListingDetails />
+            <ListingDetails 
+            street="123 street name"
+            city="Nesconset"
+            zipcode="11767" />
         </div>
     );
 }
