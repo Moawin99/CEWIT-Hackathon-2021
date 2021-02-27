@@ -23,16 +23,30 @@ const useStyles = makeStyles(() => ({
         backgroundColor: 'pink',
         borderRadius: '50%'
     },
-    container:{
+    container1:{
         display: 'flex',
         gap: '10px',
         position: 'relative',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        left: 90 
     },
     logoText:{
         fontSize: 38,
         fontWeight: 'bold',
         color: '#ffffff'
+    },
+    container2:{
+        display: 'flex',
+        position: 'relative',
+        backgroundColor: '#606060',
+        borderRadius: '10%',
+        padding: '10px',
+        left: 360
+    },
+    userText:{
+        fontSize: 28,
+        fontWeight: 'bold',
+        color: "white"
     }
 }))
 
@@ -42,11 +56,17 @@ function ListingHeader({className, ...rest}){
         <div>
             <header>
                 <Toolbar className={classes.toolBar}>
-                    <Box flexGrow={.38} className={classes.container}>
+                    <Box flexGrow={.38} className={classes.container1}>
                         <div className={classes.logo} />
                         <Typography className={classes.logoText}>
                             Internzip
                         </Typography>
+                    </Box>
+                    <Box className={classes.container2}>
+                        <Typography className={classes.userText}>
+                            Welcome User!
+                        </Typography>
+
                     </Box>
 
                 </Toolbar>
