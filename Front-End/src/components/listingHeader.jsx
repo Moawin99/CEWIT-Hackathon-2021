@@ -8,9 +8,6 @@ import {
 
 const useStyles = makeStyles(() => ({
     
-    root:{
-        backgroundColor: '#cccc'
-    },
     toolBar:{
         backgroundColor: '#414141',
         height: '100px',
