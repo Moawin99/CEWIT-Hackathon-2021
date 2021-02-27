@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     Box,
     makeStyles,
@@ -46,6 +46,11 @@ const useStyles = makeStyles(() => ({
 }))
 
 function Sort({className, ...rest}){
+    const [price, setPrice] = useState();
+    const [group, setGroup] = useState();
+    const [location, setLocation] = useState();
+    const [covidPack, setCovidPack] = useState(true);
+    const [isPetAllowed, setIsPetAllowed] = useState(false);
     const classes = useStyles();
     return(
         <div className={classes.container}>
