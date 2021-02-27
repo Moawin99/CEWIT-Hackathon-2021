@@ -5,6 +5,7 @@ import java.util.List;
 public class Listing {
 	
 	private User user;
+	private String street;
 	private int zipcode;
 	private String city;
 	private int rooms;
@@ -12,8 +13,9 @@ public class Listing {
 	private int price;
 	private String image;
 	
-	public Listing(User user, int zipcode, String city, int rooms, List<String> attractions, int price, String image) {
+	public Listing(User user, String street, int zipcode, String city, int rooms, List<String> attractions, int price, String image) {
 		this.user = user;
+		this.street = street;
 		this.zipcode = zipcode;
 		this.city = city;
 		this.rooms = rooms;
@@ -77,6 +79,8 @@ public class Listing {
 	public void setImage(String image) {
 		this.image = image;
 	}
-	
-	
+
+	public String getStreet() {return street;}
+
+	public void setStreet(String street) { this.street = street; }
 }
