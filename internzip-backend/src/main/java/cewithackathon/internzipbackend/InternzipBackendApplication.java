@@ -1,13 +1,13 @@
-package hackathonbackend.internzip;
+package cewithackathon.internzipbackend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class InternzipApplication {
+public class InternzipBackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(InternzipApplication.class, args);
+		SpringApplication.run(InternzipBackendApplication.class, args);
 	}
 
 }

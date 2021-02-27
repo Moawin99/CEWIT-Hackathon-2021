@@ -8,11 +8,11 @@
 		<version>2.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>hackathon-backend</groupId>
-	<artifactId>internzip</artifactId>
+	<groupId>cewit-hackathon</groupId>
+	<artifactId>internzip-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>internzip</name>
-	<description>Hackathon project CEWIT 2021</description>
+	<name>internzip-backend</name>
+	<description>Cewit Hacakathon 2021</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
