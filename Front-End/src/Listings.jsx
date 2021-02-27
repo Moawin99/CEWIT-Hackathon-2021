@@ -3,6 +3,7 @@ import ListingHeader from './components/listingHeader';
 import Sort from './components/listingSort';
 import InfoAlert from './components/alert';
 import ListingDetails from './components/listingDetails';
+import ListingGrid from './components/listingGrid';
 
 function Listings() {
     return(
@@ -10,7 +11,7 @@ function Listings() {
             <ListingHeader />
             <Sort />
             <InfoAlert />
-
+            <ListingGrid />
         </div>
     );
 }
