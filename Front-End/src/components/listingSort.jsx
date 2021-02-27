@@ -14,21 +14,24 @@ import {
 const useStyles = makeStyles(() => ({
     container:{
         display: 'flex',
-        backgroundColor: '#ebf0ff',
+        backgroundColor: '#ffff',
         position: 'relative',
         height: '75px',
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        borderBottom: '1px solid lightgrey'
     },
     sortContainer:{
         display: 'flex',
         justifyContent: 'space-around',
         position: 'relative',
-        flexDirection: 'row'
+        flexDirection: 'row',
     },
     sortText:{
         fontSize: 28,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        display: 'flex',
+        gap: 10,
     },
     verticalLine:{
         width: '4px',
@@ -38,11 +41,18 @@ const useStyles = makeStyles(() => ({
     },
     formControl:{
         margin: '10px',
-        minWidth: 120 
+        minWidth: 120,
     },
     textBox:{
         display: 'none'
-    }
+    },
+    vert: {
+        border: 'none',
+        borderLeft:    '1px solid hsla(200, 10%, 50%,100)',
+        height:         '50px',
+        width:          '1px'
+    },
+
 }))
 
 function Sort({className, ...rest}){
@@ -55,19 +65,21 @@ function Sort({className, ...rest}){
     return(
         <div className={classes.container}>
             <Box className={classes.sortContainer}>
-                <Typography className={classes.sortText}>
-                    Sort :
+                <Typography className={classes.sortText} style={{margin: 'auto', paddingRight: 10, marginLeft: 45}}>
+                    Sort
+                </Typography>
+
+                <Typography style={{margin: 'auto'}}>
+                    <hr className={classes.vert}>
+                    </hr>
                 </Typography>
                 <FormControl variant="outlined" className={classes.formControl}>
                     <InputLabel id="demo-simple-select-outlined-label">Price</InputLabel>
-                    <Select
-                    labelId="demo-simple-select-outlined-label"
-                    id="demo-simple-select-outlined"
-                    >
+                    <Select>
                     <MenuItem value="">
                         <em>None</em>
                     </MenuItem>
-                    <MenuItem value="> $1000">> $1000</MenuItem>
+                    <MenuItem value="> $1000"> $1000</MenuItem>
                     <MenuItem value="$1001-$1500">$1001 - $1500</MenuItem>
                     <MenuItem value="$1501-$2000">$1501 - $2000</MenuItem>
                     <MenuItem value ="$2000+">$2000+</MenuItem>
@@ -75,11 +87,8 @@ function Sort({className, ...rest}){
                 </FormControl>
 
                 <FormControl variant="outlined" className={classes.formControl}>
-                    <InputLabel id="demo-simple-select-outlined-label">Groups</InputLabel>
-                    <Select
-                    labelId="demo-simple-select-outlined-label"
-                    id="demo-simple-select-outlined"
-                    >
+                    <InputLabel>Groups</InputLabel>
+                    <Select>
                     <MenuItem value="">
                         <em>None</em>
                     </MenuItem>
@@ -90,12 +99,9 @@ function Sort({className, ...rest}){
                     </Select>
                 </FormControl>
 
-                <FormControl variant="outlined" className={classes.formControl}>
-                    <InputLabel id="demo-simple-select-outlined-label">Location</InputLabel>
-                    <Select
-                    labelId="demo-simple-select-outlined-label"
-                    id="demo-simple-select-outlined"
-                    >
+                <FormControl  variant="outlined" className={classes.formControl}>
+                    <InputLabel> Location</InputLabel>
+                    <Select>
                     <MenuItem value="">
                         <em>None</em>
                     </MenuItem>
@@ -107,9 +113,14 @@ function Sort({className, ...rest}){
                     </Select>
                 </FormControl>
             </Box>
-            <Box className={classes.sortContainer}>
-                <Typography className={classes.sortText}>
-                    Tags :
+            <Box className={classes.sortContainer} style={{paddingRight: 30}}>
+            <Typography className={classes.sortText} style={{margin: 'auto', paddingRight: 10}}>
+                    Tags
+                </Typography>
+
+                <Typography style={{margin: 'auto', paddingRight: 10}}>
+                    <hr className={classes.vert}>
+                    </hr>
                 </Typography>
                 <FormControlLabel control={<Checkbox/>} label="COVID Package"/>
                 <FormControlLabel control={<Checkbox/>} label="Pets Allowed"/>   

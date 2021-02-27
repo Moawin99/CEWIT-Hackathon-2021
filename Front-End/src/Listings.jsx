@@ -8,7 +8,8 @@ function Listings() {
     return(
         <div className="App">
             <ListingHeader />
-            <ListingDetails />
+            <Sort />
+            <InfoAlert />
         </div>
     );
 }
