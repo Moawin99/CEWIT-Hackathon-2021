@@ -7,7 +7,8 @@ import {
     FormControl,
     Select,
     InputLabel,
-
+    Checkbox,
+    FormControlLabel
 } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
@@ -16,7 +17,8 @@ const useStyles = makeStyles(() => ({
         backgroundColor: '#ebf0ff',
         position: 'relative',
         height: '75px',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        justifyContent: 'space-between'
     },
     sortContainer:{
         display: 'flex',
@@ -33,6 +35,13 @@ const useStyles = makeStyles(() => ({
         height: '40px',
         borderRight: '2px solid black'
         //for now this is not implemented bc adding a div adds it to a new line
+    },
+    formControl:{
+        margin: '10px',
+        minWidth: 120 
+    },
+    textBox:{
+        display: 'none'
     }
 }))
 
@@ -40,11 +49,11 @@ function Sort({className, ...rest}){
     const classes = useStyles();
     return(
         <div className={classes.container}>
-            <Box>
+            <Box className={classes.sortContainer}>
                 <Typography className={classes.sortText}>
                     Sort :
                 </Typography>
-                <FormControl variant="outlined">
+                <FormControl variant="outlined" className={classes.formControl}>
                     <InputLabel id="demo-simple-select-outlined-label">Price</InputLabel>
                     <Select
                     labelId="demo-simple-select-outlined-label"
@@ -53,14 +62,14 @@ function Sort({className, ...rest}){
                     <MenuItem value="">
                         <em>None</em>
                     </MenuItem>
-                    <MenuItem>> $1000</MenuItem>
-                    <MenuItem>$1001 - $1500</MenuItem>
-                    <MenuItem>$1501 - $2000</MenuItem>
-                    <MenuItem>$2000+</MenuItem>
+                    <MenuItem value="> $1000">> $1000</MenuItem>
+                    <MenuItem value="$1001-$1500">$1001 - $1500</MenuItem>
+                    <MenuItem value="$1501-$2000">$1501 - $2000</MenuItem>
+                    <MenuItem value ="$2000+">$2000+</MenuItem>
                     </Select>
                 </FormControl>
 
-                <FormControl variant="outlined">
+                <FormControl variant="outlined" className={classes.formControl}>
                     <InputLabel id="demo-simple-select-outlined-label">Groups</InputLabel>
                     <Select
                     labelId="demo-simple-select-outlined-label"
@@ -76,7 +85,7 @@ function Sort({className, ...rest}){
                     </Select>
                 </FormControl>
 
-                <FormControl variant="outlined">
+                <FormControl variant="outlined" className={classes.formControl}>
                     <InputLabel id="demo-simple-select-outlined-label">Location</InputLabel>
                     <Select
                     labelId="demo-simple-select-outlined-label"
@@ -85,17 +94,20 @@ function Sort({className, ...rest}){
                     <MenuItem value="">
                         <em>None</em>
                     </MenuItem>
-                    <MenuItem>San Francisco</MenuItem>
-                    <MenuItem>Palo Alto</MenuItem>
-                    <MenuItem>Cupertino</MenuItem>
-                    <MenuItem>Seattle</MenuItem>
+                    <MenuItem value="San Francisco">San Francisco</MenuItem>
+                    <MenuItem value="Palo Alto">Palo Alto</MenuItem>
+                    <MenuItem value="Cupertino">Cupertino</MenuItem>
+                    <MenuItem value="NYC">NYC</MenuItem>
+                    <MenuItem value="Seattle">Seattle</MenuItem>
                     </Select>
                 </FormControl>
-
+            </Box>
+            <Box className={classes.sortContainer}>
                 <Typography className={classes.sortText}>
                     Tags :
                 </Typography>
-                
+                <FormControlLabel control={<Checkbox/>} label="COVID Package"/>
+                <FormControlLabel control={<Checkbox/>} label="Pets Allowed"/>   
             </Box>
         </div>
     )
