@@ -11,7 +11,9 @@ function Listings() {
             <ListingDetails 
             street="123 street name"
             city="Nesconset"
-            zipcode="11767" />
+            zipcode="11767"
+            price="1300"
+            />
         </div>
     );
 }

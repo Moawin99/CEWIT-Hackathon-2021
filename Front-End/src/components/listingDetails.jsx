@@ -2,55 +2,79 @@ import React from 'react';
 import {
     makeStyles,
     Typography,
-    Box,
-    Chip
+    Paper,
+    Button
 } from '@material-ui/core';
 import House from '/mnt/c/Users/Mark/Documents/gitProjects/CEWIT-Hackathon-2021/Front-End/src/images/House.jpg';
 import ActivityChip from './activityChip';
 
 const useStyles = makeStyles(() => ({
     container:{
-        height: 100,
         display: 'flex',
-        flexDirection: 'column',
-        padding: '1em 20em 0 20em'
-    },
-    address:{
-        fontSize: 36,
-        fontWeight: 'bold',
-        display: 'flex',
-        justifyContent: 'flex-start'
+        flexDirection: 'row',
+        padding: '2em 12em 0 12em'
     },
     image:{
-        height: '650px',
-        width: '100%',
+        height: '40em',
         borderRadius: '5%'
     },
-    detailText:{ 
-        fontSize: 36,
-        fontWeight: 'bold'
+    addressText:{
+        fontSize: 28,
+        fontWeight: 'bold',
+        paddingLeft: '1em'
     },
-    arrangeContainer:{
-        marginTop: '40em'
+    addressContainer:{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center'
+    },
+    list:{
+        listStyle: 'none'
+    },
+    listItems:{
+        margin: '10px 0'
+    },
+    container3:{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-around'
+    },
+    payPaper:{
+        borderRadius: '5%',
+        height: '8em',
     }
-}))
+    }))
 
 function ListingDetails(props, {className, ...rest}){
     const classes = useStyles();
+    const features = ["covid", "food", "view", "pets",];
     return(
-        <div>
-            <div className={classes.container}>
-            <Typography className={classes.address}>
-                Address: {props.street}, {props.city} {props.zipcode}
-            </Typography>
-            <img src={House} className={classes.image} />
-           </div>
-           <div className={classes.arrangeContainer}>
-               <Typography className={classes.detailText}>
-                    Arrangements
-               </Typography>
-               <ActivityChip feature="food" />
-           </div>
+        <div className={classes.container}>
+            <div>
+              <img src={House} className={classes.image} />
+            </div>
+            <div className={classes.addressContainer}>
+                <Typography className={classes.addressText}>
+                    Address: {props.street}, {props.city} {props.zipcode}
+                </Typography>
+                <div className={classes.container3}>
+                    <ul className={classes.list}>
+                        <h3>Includes</h3>
+                        {features.map(feature => (
+                            <li className={classes.listItems}>
+                            <ActivityChip
+                            feature={feature}
+                            />
+                            </li>
+                        ))}
+                    </ul> 
+                    <Paper elevation={3} className={classes.payPaper}>
+                        <h2>${props.price} / mo</h2>
+                        <Button variant='contained' color='secondary'>Book</Button>
+                    </Paper>
+                </div>
+                
+            </div>
         </div>
     )
 }
