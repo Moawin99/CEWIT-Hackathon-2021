@@ -10,6 +10,7 @@ function Listings() {
             <ListingHeader />
             <Sort />
             <InfoAlert />
+
         </div>
     );
 }
