@@ -1,5 +1,5 @@
 package cewithackathon.internzipbackend.model;
 
-public class Season {
-
+public enum Season {
+    SPRING, WINTER, SUMMER, FALL
 }
