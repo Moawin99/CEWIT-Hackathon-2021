@@ -11,7 +11,19 @@ public class Chat {
 		this.messages = messages;
 		this.group = group;
 	}
-
+	
+	public void addMessage(Message m) {
+		messages.add(m);
+	}
+	
+	public Message deleteMessage(int index) {
+		return messages.remove(index);
+	}
+	
+	public int indexOf(Message m) {
+		return messages.indexOf(m);
+	}
+	
 	public List<Message> getMessages() {
 		return messages;
 	}
@@ -27,7 +39,5 @@ public class Chat {
 	public void setGroup(Group group) {
 		this.group = group;
 	}
-	
-	
 	
 }
