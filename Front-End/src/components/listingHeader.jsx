@@ -1,17 +1,20 @@
 import React, {Component} from 'react';
+import TocIcon from '@material-ui/icons/Toc';
 import {
     Box,
     makeStyles,
     Toolbar,
-    Typography
+    Typography,
+    Menu,
+    MenuItem
 } from '@material-ui/core';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 const useStyles = makeStyles(() => ({
     
     toolBar:{
         backgroundColor: '#414141',
         height: '100px',
-        display: 'flex',
         justifyContent: 'center'
     },
     logo:{
@@ -23,9 +26,9 @@ const useStyles = makeStyles(() => ({
     container1:{
         display: 'flex',
         gap: '10px',
-        position: 'relative',
         justifyContent: 'center',
-        left: 90 
+        position: 'relative',
+        left: 90
     },
     logoText:{
         fontSize: 38,
@@ -33,38 +36,61 @@ const useStyles = makeStyles(() => ({
         color: '#ffffff'
     },
     container2:{
-        display: 'flex',
-        position: 'relative',
         backgroundColor: '#606060',
-        borderRadius: '10%',
-        padding: '10px',
-        left: 360
+        height: '50px',
+        width: '125px',
+        display: 'flex',
+        justifyContent: 'center',
+        borderRadius: 30,
     },
-    userText:{
-        fontSize: 28,
-        fontWeight: 'bold',
-        color: "white"
-    }
+ 
 }))
 
 function ListingHeader({className, ...rest}){
+    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    function handleClick(event) {
+      if (anchorEl !== event.currentTarget) {
+        setAnchorEl(event.currentTarget);
+      }
+    }
+  
+    function handleClose() {
+      setAnchorEl(null);
+    }
     const classes = useStyles();
     return(
         <div>
             <header>
                 <Toolbar className={classes.toolBar}>
-                    <Box flexGrow={.38} className={classes.container1}>
+                    <Box flexGrow={0.75} className={classes.container1}>
                         <div className={classes.logo} />
                         <Typography className={classes.logoText}>
-                            Internzip
+                            InternZip
                         </Typography>
                     </Box>
-                    <Box className={classes.container2}>
-                        <Typography className={classes.userText}>
-                            Welcome User!
-                        </Typography>
-
+                    <Box className={classes.container2}         
+                        aria-owns={anchorEl ? "simple-menu" : undefined}
+                        aria-haspopup="true"
+                        onMouseOver={handleClick}>
+                        <Box>
+                        <TocIcon style={{ height: 50, width: 70}} color='action'/>
+                        </Box>
+                        <Box>
+                        <AccountCircleIcon style={{ height: 50, width: 30}} color='action'/>
+                        </Box>
                     </Box>
+                    <Menu
+                        style={{ marginTop: 50, marginLeft: 5}}
+                        id="simple-menu"
+                        anchorEl={anchorEl}
+                        open={Boolean(anchorEl)}
+                        onClose={handleClose}
+                        MenuListProps={{ onMouseLeave: handleClose }}>
+                        <MenuItem onClick={handleClose}>Profile</MenuItem>
+                        <MenuItem onClick={handleClose}>My account</MenuItem>
+                        <MenuItem onClick={handleClose}>Logout</MenuItem>
+                    </Menu>
 
                 </Toolbar>
             </header>

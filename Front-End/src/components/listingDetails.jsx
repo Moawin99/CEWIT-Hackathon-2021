@@ -5,7 +5,7 @@ import {
     Paper,
     Button
 } from '@material-ui/core';
-import House from '/mnt/c/Users/Mark/Documents/gitProjects/CEWIT-Hackathon-2021/Front-End/src/images/House.jpg';
+import House from '../images/House.jpg';
 import ActivityChip from './activityChip';
 
 const useStyles = makeStyles(() => ({

@@ -4,7 +4,6 @@ import Alert from '@material-ui/lab/Alert';
 
 const useStyles = makeStyles(() => ({
     container:{
-        marginTop: '30px',
         width: '100%'
     }
 }))
@@ -14,7 +13,7 @@ function InfoAlert({className, ...rest}){
     return(
         <div className={classes.container}>
             <Alert severity="info">
-                Houses with COVID Packages provide masks and sanitation for the full duration of your stay
+                Houses with COVID Packages provide masks and sanitation for the full duration of your stay.
             </Alert>
         </div>
     )
