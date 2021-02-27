@@ -1,5 +1,9 @@
 package cewithackathon.internzipbackend.model;
 
 public enum Location {
-    SAN_FRAN, PALO_ALTO, CUPERTINO, NYC, SEATTLE
+	SAN_FRANCISCO,
+	PALO_ALTO,
+	CUPERTINO,
+	NEW_YORK_CITY,
+	SEATTLE
 }
