@@ -438,3 +438,113 @@ export const seattle = [
         ]
     },
 ];
+
+export const cupertino =[
+    {
+        address: "10794 Deep Cliffe Dr, Cupertino, CA 95014",
+        rooms: "5 bedrooms",
+        baths: "4.5 bath",
+        price: "6,500",
+        image: "https://photos.zillowstatic.com/fp/ff4382091b5059040514bc9a8c539d4a-cc_ft_768.jpg",
+        attractions : [
+            "Park",
+            "FB Office"
+        ]
+    },
+    {
+        address: "21989 Lindy Ln, Cupertino, CA 95014",
+        rooms: "4 bedrooms",
+        baths: "4 bath",
+        price: "8,500",
+        image: "https://photos.zillowstatic.com/fp/34c00049c61b8076c33c32b745ee424e-cc_ft_768.jpg",
+        attractions: ["park"]
+    },
+    {
+        address: "7723 Huntridge Ln, Cupertino, CA 95014",
+        rooms: "3 bedrooms",
+        baths: "2 bath",
+        price: "4,000",
+        image: "https://photos.zillowstatic.com/fp/effda5468c120f4ee4f606bebf7e295f-cc_ft_768.jpg",
+        attractions: []
+    },
+    {
+        address: "20157 Suisun Dr, Cupertino, CA 95014",
+        rooms: "4 bedroom",
+        baths: "3.5 bath",
+        price: "5,275",
+        image: "https://photos.zillowstatic.com/fp/a5146426f70c069d289e413ff92d61d8-cc_ft_768.jpg",
+        attractions: []
+    },
+
+    {
+        address: "18861 Hunter Way, Cupertino, CA 95014",
+        rooms: "4 bedrooms",
+        baths: "2 bath",
+        price: "3,600",
+        image: "https://photos.zillowstatic.com/fp/bb45327d2fc960eb9cbf35251142e4ac-cc_ft_768.jpg",
+        attractions : [
+            "Park",
+            "FB Office"
+        ]
+    },
+    {
+        address: "10325 Stern Ave, Cupertino, CA 95014",
+        rooms: "3 bedrooms",
+        baths: "2 bath",
+        price: "4,300",
+        image: "https://photos.zillowstatic.com/fp/defd6d9b0fc2d07f9c00b20576b81854-cc_ft_768.jpg",
+        attractions: ["park"]
+    },
+    {
+        address: "20120 Forest Ave, Cupertino, CA 95014",
+        rooms: "1 bedrooms",
+        baths: "1 bath",
+        price: "2,750",
+        image: "https://photos.zillowstatic.com/fp/05d8a26fd5d1b29785149e052e7e9a03-cc_ft_768.jpg",
+        attractions: []
+    },
+    {
+        address: "20731 Hanford Dr, Cupertino, CA 95014",
+        rooms: "6 bedroom",
+        baths: "5 bath",
+        price: "7,800",
+        image: "https://photos.zillowstatic.com/fp/3b3b71210ffa79104375c7fc03efcd98-cc_ft_768.jpg",
+        attractions: []
+    },
+
+    {
+        address: "22620 Ricardo Rd, Cupertino, CA 95014",
+        rooms: "3 bedrooms",
+        baths: "2.5 bath",
+        price: "4,495",
+        image: "https://photos.zillowstatic.com/fp/e6d7c6fdf520d91821a8b12eef6870aa-cc_ft_768.jpg",
+        attractions : [
+            "Park",
+            "FB Office"
+        ]
+    },
+    {
+        address: "10057 Scenic Blvd, Cupertino, CA 95014",
+        rooms: "3 bedrooms",
+        baths: "2.5 bath",
+        price: "4,200",
+        image: "https://maps.googleapis.com/maps/api/staticmap?mobile=false&sensor=true&maptype=satellite&size=768x576&zoom=17&center=37.3220329284668,-122.0624771118164&key=AIzaSyBJsNQO5ZeG-XAbqqWLKwG08fWITSxg33w&&signature=a-Dal54UXjgb1FWH7Xx-YtMxe48=",
+        attractions: ["park"]
+    },
+    {
+        address: "10364 Creston Dr, Cupertino, CA 95014",
+        rooms: "4 bedrooms",
+        baths: "2.5 bath",
+        price: "5,500",
+        image: "https://photos.zillowstatic.com/fp/d80ffb3a371d095c8043e667bcaf3a73-cc_ft_768.jpg",
+        attractions: []
+    },
+    {
+        address: "20409 Via San Marino, Cupertino, CA 95014",
+        rooms: "4 bedroom",
+        baths: "2.5 bath",
+        price: "5,000",
+        image: "https://photos.zillowstatic.com/fp/1a175c9f0cb739609004106c60663de8-cc_ft_768.jpg",
+        attractions: []
+    },
+];
