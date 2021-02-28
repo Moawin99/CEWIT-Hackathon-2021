@@ -173,6 +173,7 @@ function ListingDetails(props, {className, ...rest}){
                     <Button style={{width: '100%'}} variant="contained" color="secondary">Book</Button>
                 </div>
                 <iframe style={{marginTop: '10px', width: '55%', height: '35%'}} className="map" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Palo%20Alto+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"  ></iframe>
+
                 <div>
                 </div>
             </div>

@@ -9,9 +9,9 @@ function ListingDetailsPage() {
         <div className="App">
             <ListingHeader />
             <ListingDetails
-            street="123 address lane"
-            city="Nesconset"
-            zipcode="11767"
+            street="55 Water Street"
+            city="Manhattan"
+            zipcode="10038"
             price="1500"
             features={["covid", "view", "food", "pets"]} />
         </div>

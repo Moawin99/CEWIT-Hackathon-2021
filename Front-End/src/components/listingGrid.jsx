@@ -9,6 +9,7 @@ import CustomCard from './customCard';
 import {sanFrancisco} from '../mockData/data';
 import {newYork} from '../mockData/data';
 import {seattle} from '../mockData/data';
+import InfoAlert from './alert';
 
 
 
@@ -19,6 +20,8 @@ const useStyles = makeStyles(() => ({
 function ListingGrid({className, ...rest}){
     const classes = useStyles();
     return(
+        <>
+        <InfoAlert />
         <Grid style={{margin: 15}} spacing={3}>
         <Typography style={{display: 'flex', marginLeft: 30, fontSize: 34}}>
             San Francisco
@@ -81,6 +84,7 @@ function ListingGrid({className, ...rest}){
         <Pagination variant="outlined" count={10} color="primary" />
         </Grid>
         </Grid>
+        </>
     )
 }
 
