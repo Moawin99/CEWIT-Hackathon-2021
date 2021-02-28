@@ -17,7 +17,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
-
+import history from './history';
 
 
 const useStyles = makeStyles({
@@ -53,7 +53,9 @@ function CustomCard(props){
     return(
         <div>
             <Card className={classes.root}>
-      <CardActionArea>
+        <CardActionArea           
+        onClick={() => history.replace('/listingDetails')}
+        >
         <CardMedia
           className={classes.media}
           image={props.image}

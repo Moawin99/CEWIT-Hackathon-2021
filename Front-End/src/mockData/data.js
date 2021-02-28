@@ -84,7 +84,7 @@ export const sanFrancisco = [
         ]
     },
     {
-        address: "25 Junipero Serra Blvd, San Francisco, CA 94127",
+        address: "25 Junipero Blvd, San Francisco, CA 94127",
         rooms: "5 bedrooms",
         baths: "3 baths",
         price: "9,500",
@@ -410,7 +410,7 @@ export const seattle = [
         ]
     },
     {
-        address: "1128 Lakev2408 SW Brandon St, Seattle, WA 98106",
+        address: "1128 SW Brandon St, Seattle, WA 98106",
         rooms: "2 bedroom",
         baths: "1 bath",
         price: "1,950",

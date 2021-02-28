@@ -1,7 +1,8 @@
 import { makeStyles } from '@material-ui/core';
 import React from 'react';
 import {
-    Grid
+    Grid,
+    Typography
 } from '@material-ui/core';
 import Pagination from '@material-ui/lab/Pagination';
 import CustomCard from './customCard';
@@ -19,6 +20,10 @@ function ListingGrid({className, ...rest}){
     const classes = useStyles();
     return(
         <Grid style={{margin: 15}} spacing={3}>
+        <Typography style={{display: 'flex', marginLeft: 30, fontSize: 34}}>
+            San Francisco
+        </Typography>
+        <hr width="96%"/>
         <Grid container spacing={3} display="flex" justify="center">
         {sanFrancisco.map((data) => {
             return(
@@ -34,6 +39,10 @@ function ListingGrid({className, ...rest}){
             );
         })}
         </Grid>
+        <Typography style={{display: 'flex', marginLeft: 30, fontSize: 34, marginTop: 30}}>
+            New York City
+        </Typography>
+        <hr width="96%"/>
         <Grid container spacing={3} display="flex" justify="center">
         {newYork.map((data) => {
             return(
@@ -49,6 +58,10 @@ function ListingGrid({className, ...rest}){
             );
         })}
         </Grid>
+        <Typography style={{display: 'flex', marginLeft: 30, fontSize: 34, marginTop: 30}}>
+            Seattle
+        </Typography>
+        <hr width="96%"/>
         <Grid container spacing={3} display="flex" justify="center">
         {seattle.map((data) => {
             return(
