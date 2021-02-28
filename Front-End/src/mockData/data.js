@@ -1,4 +1,4 @@
-export const listings = [
+export const sanFrancisco = [
     {
         address: "2900 Pacific Ave, San Francisco, CA 94115",
         rooms: "6 bedrooms",
@@ -37,7 +37,7 @@ export const listings = [
     },
 ];
 
-export const listings2 = [
+export const newYork = [
     {
         address: "505 W 29th St, New York, NY 10001",
         rooms: "1 bedroom",
@@ -76,7 +76,7 @@ export const listings2 = [
     },
 ];
 
-export const listings3 = [
+export const seattle = [
     {
         address: "2134 Western Ave, Seattle, WA 98121",
         rooms: "2 bedrooms",

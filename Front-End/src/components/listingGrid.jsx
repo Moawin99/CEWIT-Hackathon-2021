@@ -5,9 +5,9 @@ import {
 } from '@material-ui/core';
 import Pagination from '@material-ui/lab/Pagination';
 import CustomCard from './customCard';
-import {listings} from '../mockData/data';
-import {listings2} from '../mockData/data';
-import {listings3} from '../mockData/data';
+import {sanFrancisco} from '../mockData/data';
+import {newYork} from '../mockData/data';
+import {seattle} from '../mockData/data';
 
 
 
@@ -20,7 +20,7 @@ function ListingGrid({className, ...rest}){
     return(
         <Grid style={{margin: 15}} spacing={3}>
         <Grid container spacing={3} display="flex" justify="center">
-        {listings.map((data) => {
+        {sanFrancisco.map((data) => {
             return(
             <Grid item> 
             <CustomCard
@@ -35,7 +35,7 @@ function ListingGrid({className, ...rest}){
         })}
         </Grid>
         <Grid container spacing={3} display="flex" justify="center">
-        {listings2.map((data) => {
+        {newYork.map((data) => {
             return(
             <Grid item> 
             <CustomCard
@@ -50,7 +50,7 @@ function ListingGrid({className, ...rest}){
         })}
         </Grid>
         <Grid container spacing={3} display="flex" justify="center">
-        {listings3.map((data) => {
+        {seattle.map((data) => {
             return(
             <Grid item> 
             <CustomCard
