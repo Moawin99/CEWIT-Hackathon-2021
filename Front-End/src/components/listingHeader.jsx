@@ -9,6 +9,7 @@ import {
     MenuItem
 } from '@material-ui/core';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import history from './history';
 
 const useStyles = makeStyles(() => ({
     
@@ -33,7 +34,9 @@ const useStyles = makeStyles(() => ({
     logoText:{
         fontSize: 38,
         fontWeight: 'bold',
-        color: '#ffffff'
+        color: '#ffffff',
+        fontFamily:  "Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important"
+
     },
     container2:{
         backgroundColor: '#606060',
@@ -53,6 +56,10 @@ function ListingHeader({className, ...rest}){
       if (anchorEl !== event.currentTarget) {
         setAnchorEl(event.currentTarget);
       }
+    }
+
+    function handleLogout(){
+        history.replace("/");
     }
   
     function handleClose() {
@@ -89,7 +96,7 @@ function ListingHeader({className, ...rest}){
                         MenuListProps={{ onMouseLeave: handleClose }}>
                         <MenuItem onClick={handleClose}>Profile</MenuItem>
                         <MenuItem onClick={handleClose}>My account</MenuItem>
-                        <MenuItem onClick={handleClose}>Logout</MenuItem>
+                        <MenuItem onClick={handleLogout}>Logout</MenuItem>
                     </Menu>
 
                 </Toolbar>

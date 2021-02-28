@@ -5,23 +5,21 @@ import java.util.List;
 public class Listing {
 	
 	private User user;
-	private String street;
-	private int zipcode;
-	private String city;
-	private int rooms;
+	private String address;
+	private String rooms;
 	private List<String> attractions;
-	private int price;
+	private String price;
 	private String image;
+	private Group group;
 	
-	public Listing(User user, String street, int zipcode, String city, int rooms, List<String> attractions, int price, String image) {
+	public Listing(User user, String address, String rooms, List<String> attractions, String price, String image, Group group) {
 		this.user = user;
-		this.street = street;
-		this.zipcode = zipcode;
-		this.city = city;
+		this.address = address;
 		this.rooms = rooms;
 		this.attractions = attractions;
 		this.price = price;
 		this.image = image;
+		this.group = group;
 	}
 
 	public User getUser() {
@@ -32,27 +30,19 @@ public class Listing {
 		this.user = user;
 	}
 
-	public int getZipcode() {
-		return zipcode;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setZipcode(int zipcode) {
-		this.zipcode = zipcode;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public int getRooms() {
+	public String getRooms() {
 		return rooms;
 	}
 
-	public void setRooms(int rooms) {
+	public void setRooms(String rooms) {
 		this.rooms = rooms;
 	}
 
@@ -64,11 +54,11 @@ public class Listing {
 		this.attractions = attractions;
 	}
 
-	public int getPrice() {
+	public String getPrice() {
 		return price;
 	}
 
-	public void setPrice(int price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 
@@ -80,7 +70,13 @@ public class Listing {
 		this.image = image;
 	}
 
-	public String getStreet() {return street;}
+	public Group getGroup() {
+		return group;
+	}
 
-	public void setStreet(String street) { this.street = street; }
+	public void setGroup(Group group) {
+		this.group = group;
+	}
+	
+	
 }

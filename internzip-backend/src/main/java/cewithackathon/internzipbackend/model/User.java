@@ -7,16 +7,14 @@ public class User {
 	private String username;
 	private String password;
 	private String email;
-	private Group group;
 	private Information information;
 	
-	public User(String name, String role, String username, String password, String email, Group group, Information information) {
+	public User(String name, String role, String username, String password, String email, Information information) {
 		this.name = name;
 		this.role = role;
 		this.username = username;
 		this.password = password;
 		this.email = email;
-		this.group = group;
 		this.information = information;
 	}
 
@@ -58,14 +56,6 @@ public class User {
 
 	public void setEmail(String email) {
 		this.email = email;
-	}
-
-	public Group getGroup() {
-		return group;
-	}
-
-	public void setGroup(Group group) {
-		this.group = group;
 	}
 
 	public Information getInformation() {

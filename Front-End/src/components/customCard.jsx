@@ -25,14 +25,15 @@ import SendIcon from '@material-ui/icons/Send';
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 345,
+      maxWidth: 320,
+      minWidth: 320,
     },
     media: {
       height: 140,
     },
   });
 
-function CustomCard(){
+function CustomCard(props){
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -58,18 +59,18 @@ function CustomCard(){
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image={Image}
+          image={props.image}
         />
         <CardContent>
           <Typography align='left' variant="h5" component="h2">
-            $3,800/mo
+            {"$ "}{props.price}
           </Typography>
          
           <Typography align='left' variant="body2" color="textSecondary" component="p">
-            2 bds 1 ba
+            {props.rooms}{" "}{props.baths}
           </Typography>
           <Typography align='left' variant="body2" color="textSecondary" component="p">
-          1312 Henderson Ave, Menlo Park, CA 94025
+          {props.address}
           </Typography>
         </CardContent>
       </CardActionArea>

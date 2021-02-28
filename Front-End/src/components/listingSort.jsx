@@ -32,6 +32,8 @@ const useStyles = makeStyles(() => ({
         fontWeight: 'bold',
         display: 'flex',
         gap: 10,
+        fontFamily:  "Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important"
+
     },
     verticalLine:{
         width: '4px',
@@ -92,10 +94,10 @@ function Sort({className, ...rest}){
                     <MenuItem value="">
                         <em>None</em>
                     </MenuItem>
-                    <MenuItem>Filler data</MenuItem>
-                    <MenuItem>Filler data</MenuItem>
-                    <MenuItem>Filler data</MenuItem>
-                    <MenuItem>Filler data</MenuItem>
+                    <MenuItem>Groups of 1</MenuItem>
+                    <MenuItem>Groups of 2</MenuItem>
+                    <MenuItem>Groups of 3</MenuItem>
+                    <MenuItem>Groups of 4</MenuItem>
                     </Select>
                 </FormControl>
 

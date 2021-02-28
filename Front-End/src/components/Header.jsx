@@ -4,9 +4,16 @@ import {
     InputBase,
     makeStyles,
     Toolbar,
-    Typography
+    Menu,
+    MenuItem,
+    Typography,
+    Modal
 } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
+import TocIcon from '@material-ui/icons/Toc';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import SignInSide from "./loginCard";
+
 
 const useStyles = makeStyles(() => ({
 
@@ -15,15 +22,17 @@ const useStyles = makeStyles(() => ({
     },
     toolBar: {
         backgroundColor: '#ffff',
-        height: '100px'
+        height: '80px'
     },
     logoText :{
         fontSize: 38,
         fontWeight: 'bold',
-        color: 'black'
+        color: 'black',
+        fontFamily:  "Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important"
+
     },
     inputRoot: {
-        top: 10,
+        top: 15,
         borderRadius: '15px',
         borderStyle: 'solid',
         borderWidth: '1px',
@@ -33,13 +42,12 @@ const useStyles = makeStyles(() => ({
       },
       inputInput: {
         padding: '1, 1, 1, 1',
-        // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em)`,
         width: '100%',
       },
       search: {
           position: 'relative',
-          top: -23,
+          top: -18,
           left: 190,
           width: 27,
           height: 27,
@@ -57,11 +65,48 @@ const useStyles = makeStyles(() => ({
           gap: '10px',
           position: 'relative',
           left: '150px  '
+      },
+        container2:{
+        backgroundColor: '#C4C4C4',
+        height: '50px',
+        width: '125px',
+        display: 'flex',
+        justifyContent: 'center',
+        borderRadius: 30,
+        marginRight: -500,
+        marginLeft: 300
+    },
+    font:{
+        fontFamily:  "Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important"
+      },
+      modal:{
+       marginLeft: 200,
+       marginRight: 200,
+       marginTop: 100
       }
 })); 
 
 function Header({className, ...rest}){
     const classes = useStyles();
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [open, setOpen] = React.useState(false);
+    const handleModalOpen = () => {
+        setOpen(true);
+      };
+    
+      const handleModalClose = () => {
+        setOpen(false);
+      };
+
+    function handleClick(event) {
+      if (anchorEl !== event.currentTarget) {
+        setAnchorEl(event.currentTarget);
+      }
+    }
+  
+    function handleClose() {
+      setAnchorEl(null);
+    }
     return(
         <div>
             <header>
@@ -85,6 +130,38 @@ function Header({className, ...rest}){
                             </div>
 
                         </Box>
+
+                        <Box className={classes.container2}         
+                        aria-owns={anchorEl ? "simple-menu" : undefined}
+                        aria-haspopup="true"
+                        onMouseOver={handleClick}>
+                        <Box>
+                        <TocIcon style={{ height: 50, width: 70}} color='action'/>
+                        </Box>
+                        <Box>
+                        <AccountCircleIcon style={{ height: 50, width: 30}} color='action'/>
+                        </Box>
+                    </Box>
+                    <Menu
+                        style={{ marginTop: 50, marginLeft: 5}}
+                        id="simple-menu"
+                        anchorEl={anchorEl}
+                        open={Boolean(anchorEl)}
+                        onClose={handleClose}
+                        MenuListProps={{ onMouseLeave: handleClose }}>
+                        <MenuItem onClick={handleClose}>Profile</MenuItem>
+                        <MenuItem onClick={handleClose}>My account</MenuItem>
+                        <MenuItem onClick={handleModalOpen}>Login</MenuItem>
+                    </Menu>
+                    <Modal open={open} 
+                            className={classes.modal}
+                            onClose={handleModalClose}
+                            aria-labelledby="simple-modal-title"
+                            aria-describedby="simple-modal-description">
+                    <SignInSide />
+
+                    </Modal>
+
                     </Toolbar>
             </header>
         </div>
