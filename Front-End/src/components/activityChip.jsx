@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
 
 function ActivityChip(props, {className, ...rest}){
     const classes = useStyles();
-    if(props.feature === 'food'){
+    if(props.feature === "food"){
         return(
             <Chip className={classes.chip} label="Restaurants Near By" icon={<FastfoodIcon />} size="medium" color="secondary" />
         );
@@ -27,7 +27,7 @@ function ActivityChip(props, {className, ...rest}){
     }
     else if(props.feature === "covid"){
         return(
-            <Chip label="COVID Package Included" className={classes.chip} size="medium" icon={<VerifiedUserIcon />} color="secondary" />
+            <Chip label="COVID Package" className={classes.chip} size="medium" icon={<VerifiedUserIcon />} color="secondary" />
         );
     }
     else if(props.feature === "view"){
