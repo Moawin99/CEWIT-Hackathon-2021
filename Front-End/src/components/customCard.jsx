@@ -11,15 +11,12 @@ import {
     Menu,
     MenuItem
 } from '@material-ui/core';
-import Image from '../images/House.jpg'
 import ListSubheader from '@material-ui/core/ListSubheader';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
 
 
 
