@@ -146,7 +146,7 @@ function ListingDetails(props, {className, ...rest}){
                 </div>
             <div className={classes.infoBox}>
                 <div>
-                    <h2 style={{fontSize: '1.5em'}}>Studo at Water Street</h2>
+                    <h2 style={{fontSize: '1.5em'}}>Studio at Water Street</h2>
                     <h3>{props.street}, {props.city} {props.zipcode}</h3>
                 </div>
                 <div>
@@ -173,7 +173,7 @@ function ListingDetails(props, {className, ...rest}){
                     </div>
                     <Button style={{width: '100%'}} variant="contained" color="secondary">Book</Button>
                 </div>
-                <iframe style={{marginTop: '10px', width: '55%', height: '35%'}} className="map" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Ammerman%20Campus%2C%20533%20College%20Rd%2C%20Selden%2C%20NY%2011784+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"  ></iframe>
+                <iframe style={{width: '55%', height: '30%'}} src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=55%20Water%20Street+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="600" frameborder="0"></iframe>
                 <div>
                 </div>
             </div>

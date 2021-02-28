@@ -13,6 +13,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import TocIcon from '@material-ui/icons/Toc';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import SignInSide from "./loginCard";
+import Logo from '../images/newLogo.png';
 
 
 const useStyles = makeStyles(() => ({
@@ -56,9 +57,7 @@ const useStyles = makeStyles(() => ({
       },
       logo: {
           height: 50,
-          width: 50,
-          backgroundColor: 'pink',
-          borderRadius: '50%',
+          width: 50
       },
       container: {
           display: 'flex',
@@ -112,7 +111,7 @@ function Header({className, ...rest}){
             <header>
                     <Toolbar className={classes.toolBar}>
                         <Box flexGrow={0.38 } className={classes.container}>
-                        <div className={classes.logo}></div>
+                            <img src={Logo}  className={classes.logo}/>
                             <Typography className={classes.logoText}>
                                 InternZip
                             </Typography>

@@ -10,6 +10,7 @@ import {
 } from '@material-ui/core';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import history from './history';
+import Logo from '../images/newLogo.png';
 
 const useStyles = makeStyles(() => ({
     
@@ -20,9 +21,7 @@ const useStyles = makeStyles(() => ({
     },
     logo:{
         height:50,
-        width:50,
-        backgroundColor: 'pink',
-        borderRadius: '50%'
+        width:50
     },
     container1:{
         display: 'flex',
@@ -71,7 +70,7 @@ function ListingHeader({className, ...rest}){
             <header>
                 <Toolbar className={classes.toolBar}>
                     <Box flexGrow={0.75} className={classes.container1}>
-                        <div className={classes.logo} />
+                        <img src={Logo} className={classes.logo} />
                         <Typography className={classes.logoText}>
                             InternZip
                         </Typography>
