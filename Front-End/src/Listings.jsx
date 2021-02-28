@@ -10,7 +10,6 @@ function Listings() {
         <div className="App">
             <ListingHeader />
            <Sort />
-           <InfoAlert />
            <ListingGrid />
         </div>
     );
