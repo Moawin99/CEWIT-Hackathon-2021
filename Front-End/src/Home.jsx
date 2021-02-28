@@ -15,6 +15,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import HouseCard from './images/house1.jpg';
+import Logo from './images/newLogo.png';
 
 import Tech from './images/big_tech.jpg';
 const muiTheme = createMuiTheme({
@@ -95,8 +96,6 @@ const muiTheme = createMuiTheme({
   logo2: {
     height: 30,
     width: 30,
-    backgroundColor: 'pink',
-    borderRadius: '50%',
     marginTop: -2
 },
   font:{
@@ -241,7 +240,7 @@ function Home() {
 
           <Grid container display ="flex" justify="flex-end" style={{marginLeft: -30, marginTop:-1}} spacing={2}>
           <Grid item >
-            <div className={classes.logo2}></div>
+            <img src={Logo} className={classes.logo2} />
             </Grid>
           <Grid item>
           <Typography className={classes.text}>  
