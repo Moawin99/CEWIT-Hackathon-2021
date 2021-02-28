@@ -12,13 +12,14 @@ public class Listing {
 	private String image;
 	private Group group;
 	
-	public Listing(User user, String address, String rooms, List<String> attractions, String price, String image) {
+	public Listing(User user, String address, String rooms, List<String> attractions, String price, String image, Group group) {
 		this.user = user;
 		this.address = address;
 		this.rooms = rooms;
 		this.attractions = attractions;
 		this.price = price;
 		this.image = image;
+		this.group = group;
 	}
 
 	public User getUser() {
