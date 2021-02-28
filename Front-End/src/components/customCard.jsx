@@ -18,7 +18,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
 import history from './history';
-
+import {groupInfo} from '../mockData/groupData';
 
 const useStyles = makeStyles({
     root: {
@@ -39,22 +39,17 @@ function CustomCard(props){
         setAnchorEl(event.currentTarget);
       }
     }
-  
+
     function handleClose() {
       setAnchorEl(null);
     }
 
     const [open, setOpen] = React.useState(true);
 
-    const handleClick1 = () => {
-      setOpen(!open);
-    };
-
     return(
         <div>
             <Card className={classes.root}>
-        <CardActionArea           
-        onClick={() => history.replace('/listingDetails')}
+        <CardActionArea     onClick={() => history.replace('/listingDetails')}      
         >
         <CardMedia
           className={classes.media}
@@ -73,7 +68,7 @@ function CustomCard(props){
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions >
         <Button size="small" color="primary" 
         aria-owns={anchorEl ? "simple-menu" : undefined}
                         aria-haspopup="true"
@@ -96,20 +91,26 @@ function CustomCard(props){
       component="nav"
       aria-labelledby="nested-list-subheader"
       subheader={
-        <ListSubheader component="div" id="nested-list-subheader">
+        <ListSubheader component="div" id="nested-list-subheader" >
           Group Members
         </ListSubheader>
       }
     >
-      <ListItem >
-        <ListItemIcon>
-          <EmojiPeopleIcon />
-        </ListItemIcon>
-        <ListItemText primary="Person 1"  style={{paddingRight: 10}}/>
-        <ListItemText primary="Cleanliness: 4/5" style={{paddingRight: 10}}/>
-        <ListItemText primary="Hobbies: " style={{paddingRight: 5}}/>
-        <ListItemText primary={""} />
-      </ListItem>
+
+  {groupInfo[0].map((data) => {
+            return(
+              <ListItem >
+              <ListItemIcon>
+                <EmojiPeopleIcon />
+              </ListItemIcon>
+              <ListItemText primary={data.name}  style={{paddingRight: 10}}/>
+              <ListItemText primary={data.cleanlieness} style={{paddingRight: 10}}/>
+              <ListItemText primary={data.hobbies} style={{paddingRight: 5}}/>
+              <ListItemText primary={""} />
+            </ListItem>
+            );
+        })}
+     
     
      
     </List>

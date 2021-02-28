@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     picContainer:{
         display: 'flex',
         flexDirection: 'column',
-        width: '50%'
+        width: '50%',
     },
     root: {
     maxWidth: 400,
@@ -134,19 +134,18 @@ function ListingDetails(props, {className, ...rest}){
                 }
             />
                 <div style={{display: 'flex', justifyContent: 'flex-start'}}>
-                    <ul style={{listStyle: 'none'}}>
+                   
                         {props.features.map(feature => (
-                            <li style={{margin: '0 2px', display: 'inline'}}>
+                            <div style={{margin: '0 2px', display: 'inline'}}>
                                 <ActivityChip
                                 feature={feature}
                                 />
-                            </li>
+                            </div>
                         ))}
-                    </ul>
                 </div>
             <div className={classes.infoBox}>
                 <div>
-                    <h2 style={{fontSize: '1.5em'}}>Studo at Water Street</h2>
+                    <h2 style={{fontSize: '1.5em'}}>Studio at Water Street</h2>
                     <h3>{props.street}, {props.city} {props.zipcode}</h3>
                 </div>
                 <div>
@@ -173,7 +172,7 @@ function ListingDetails(props, {className, ...rest}){
                     </div>
                     <Button style={{width: '100%'}} variant="contained" color="secondary">Book</Button>
                 </div>
-                <iframe style={{marginTop: '10px', width: '55%', height: '35%'}} className="map" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Ammerman%20Campus%2C%20533%20College%20Rd%2C%20Selden%2C%20NY%2011784+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"  ></iframe>
+                <iframe style={{marginTop: '10px', width: '55%', height: '35%'}} className="map" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Palo%20Alto+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"  ></iframe>
                 <div>
                 </div>
             </div>
