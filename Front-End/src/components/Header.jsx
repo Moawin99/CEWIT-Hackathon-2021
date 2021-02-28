@@ -6,11 +6,13 @@ import {
     Toolbar,
     Menu,
     MenuItem,
-    Typography
+    Typography,
+    Modal
 } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import TocIcon from '@material-ui/icons/Toc';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import SignInSide from "./loginCard";
 
 
 const useStyles = makeStyles(() => ({
@@ -25,7 +27,9 @@ const useStyles = makeStyles(() => ({
     logoText :{
         fontSize: 38,
         fontWeight: 'bold',
-        color: 'black'
+        color: 'black',
+        fontFamily:  "Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important"
+
     },
     inputRoot: {
         top: 15,
@@ -72,12 +76,27 @@ const useStyles = makeStyles(() => ({
         marginRight: -500,
         marginLeft: 300
     },
- 
+    font:{
+        fontFamily:  "Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important"
+      },
+      modal:{
+       marginLeft: 200,
+       marginRight: 200,
+       marginTop: 100
+      }
 })); 
 
 function Header({className, ...rest}){
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
+    const [open, setOpen] = React.useState(false);
+    const handleModalOpen = () => {
+        setOpen(true);
+      };
+    
+      const handleModalClose = () => {
+        setOpen(false);
+      };
 
     function handleClick(event) {
       if (anchorEl !== event.currentTarget) {
@@ -132,8 +151,16 @@ function Header({className, ...rest}){
                         MenuListProps={{ onMouseLeave: handleClose }}>
                         <MenuItem onClick={handleClose}>Profile</MenuItem>
                         <MenuItem onClick={handleClose}>My account</MenuItem>
-                        <MenuItem onClick={handleClose}>Logout</MenuItem>
+                        <MenuItem onClick={handleModalOpen}>Login</MenuItem>
                     </Menu>
+                    <Modal open={open} 
+                            className={classes.modal}
+                            onClose={handleModalClose}
+                            aria-labelledby="simple-modal-title"
+                            aria-describedby="simple-modal-description">
+                    <SignInSide />
+
+                    </Modal>
 
                     </Toolbar>
             </header>

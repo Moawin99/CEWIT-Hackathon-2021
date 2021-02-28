@@ -75,14 +75,16 @@ const muiTheme = createMuiTheme({
     },
     footer: {
       backgroundColor: "#212121",
-      height: "60px",
+      height: "40px",
       position: 'fixed',
       width: '100%',
       bottom: 0
     },
     text:{
       color: 'white',
-      fontFamily:  "Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important"
+      fontFamily:  "Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important",
+      fontSize: '10px',
+      marginTop: -2
     },
     logo: {
       height: 50,
@@ -90,6 +92,13 @@ const muiTheme = createMuiTheme({
       backgroundColor: 'pink',
       borderRadius: '50%',
   },
+  logo2: {
+    height: 30,
+    width: 30,
+    backgroundColor: 'pink',
+    borderRadius: '50%',
+    marginTop: -2
+},
   font:{
     fontFamily:  "Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important"
 
@@ -142,7 +151,7 @@ function Home() {
         <Header />
         <Grid container>
           <Grid item container>
-          <img src={House} className={classes.image}/>
+          <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/studio-william-hefner-1486154705.jpg" className={classes.image}/>
           <div className={classes.containerRoot}>
           <MuiThemeProvider theme={muiTheme}> 
           <Stepper 
@@ -232,9 +241,9 @@ function Home() {
 
           <Grid container display ="flex" justify="flex-end" style={{marginLeft: -30, marginTop:-1}} spacing={2}>
           <Grid item >
-            <div className={classes.logo}></div>
+            <div className={classes.logo2}></div>
             </Grid>
-          <Grid item >
+          <Grid item>
           <Typography className={classes.text}>  
             By: Marcos, Alexis, Mark, Peter
           </Typography>
