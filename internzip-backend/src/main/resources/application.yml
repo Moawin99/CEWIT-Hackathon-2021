@@ -4,6 +4,6 @@ spring:
       ddl-auto: create
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   datasource:
-    url: "jdbc:postgresql://localhost:5433/internzip"
+    url: "jdbc:postgresql://localhost:5432/internzip"
     username: internzip
     password: internzip
